@@ -1,0 +1,6 @@
+[submodule "ice_engine/ice_engine"]
+	path = ice_engine/ice_engine
+	url = https://github.com/icebreakersentertainment/ice_engine.git
+[submodule "SQLiteCpp/SQLiteCpp"]
+	path = SQLiteCpp/SQLiteCpp
+	url = https://github.com/SRombauts/SQLiteCpp.git
