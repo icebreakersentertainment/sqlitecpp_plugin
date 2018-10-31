@@ -43,7 +43,12 @@ target_include_directories(sqlitecpp_plugin PRIVATE ${GLM_INCLUDE_DIRS})
 
 target_compile_options(sqlitecpp_plugin PRIVATE ${SQLITECPP_PLUGIN_COMPILER_FLAGS})
 
-target_link_libraries(sqlitecpp_plugin -Wl,--whole-archive sqlite3 -Wl,--no-whole-archive)
+if(UNIX AND NOT APPLE)
+  target_link_libraries(sqlitecpp_plugin -Wl,--whole-archive sqlite3 -Wl,--no-whole-archive)
+else()
+  target_link_libraries(sqlitecpp_plugin sqlite3)
+endif()
+
 target_link_libraries(sqlitecpp_plugin SQLiteCpp)
 target_link_libraries(sqlitecpp_plugin ${BOOST_SYSTEM_LIBRARY} )
 target_link_libraries(sqlitecpp_plugin ${BOOST_CHRONO_LIBRARY} )
