@@ -50,7 +50,7 @@ target_include_directories(sqlitecpp_plugin PRIVATE ${ANGELSCRIPT_INCLUDE_DIRS})
 target_include_directories(sqlitecpp_plugin PRIVATE ${GLM_INCLUDE_DIRS})
 #target_include_directories(sqlitecpp_plugin PRIVATE ${GLEW_INCLUDE_DIRS})
 
-target_compile_definitions(sqlitecpp_plugin PRIVATE ${YOJIMBO_PLUGIN_DEFINITIONS})
+target_compile_definitions(sqlitecpp_plugin PRIVATE ${SQLITECPP_PLUGIN_DEFINITIONS})
 target_compile_options(sqlitecpp_plugin PRIVATE ${SQLITECPP_PLUGIN_COMPILER_FLAGS})
 
 if(UNIX AND NOT APPLE)
